@@ -9,20 +9,13 @@ import page.infoezPage;
 public class Search extends Base {
 	infoezPage SP = new infoezPage(driver); 
 	
+			
 	
-	
-	
-	
-	@When("user click the customer credentials")
-	public void user_click_the_customer_credentials() {
-		ElementWait(SP.Customeridpassword);
-	    click(SP.Customeridpassword);
+	@When("user launches the login Page Application URL")
+	public void user_launches_the_login_page_application_url() {
+		openUrl("https://d2mojgetgp5xie.cloudfront.net/");
 	}
-	@When("user click the login btn")
-	public void user_click_the_login_btn() {
-		ElementWait(SP.loginbtn);
-	    click(SP.loginbtn);
-	}
+
 
 	@When("user enters the shop name in search field")
 	public void user_enters_the_shop_name_in_search_field() {

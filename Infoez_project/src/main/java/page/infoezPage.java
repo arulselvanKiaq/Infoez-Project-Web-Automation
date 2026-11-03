@@ -41,5 +41,30 @@ public class infoezPage {
 	@FindBy(xpath = "//h3")
 	public WebElement shopName;
 	
+	@FindBy(xpath = "//*[@id=\"root\"]/div/main/div/div[2]/aside/div[2]/div[1]/button/svg")
+	public WebElement categorydrpdwn;
+	@FindBy(xpath = "//*[@id=\"root\"]/div/main/div/div[2]/aside/div[2]/div[2]/button/svg")
+	public WebElement sortbydrpdwn;
+	@FindBy(xpath = "//*[@id=\"root\"]/div/main/div/div[2]/aside/div[2]/div[3]/button/svg")
+	public WebElement ratingdrpdwn;
+	@FindBy(xpath = "//*[@id=\"root\"]/div/main/div/div[2]/aside/div[2]/label/input")
+	public WebElement verifiedcheckbox;
+	@FindBy(xpath = "//*[@id=\"root\"]/div/main/div/div[2]/aside/div[2]/div[1]/button")
+	public WebElement restaurants;
+	@FindBy(xpath = "//*[@id=\"root\"]/div/main/div/div[2]/aside/div[2]/div[2]/button")
+	public WebElement toprated;
+	@FindBy(xpath = "//*[@id=\"root\"]/div/main/div/div[2]/aside/div[2]/div[3]/button")
+	public WebElement ratings;
+	
+	@FindBy(xpath = "//*[@id=\"root\"]/div/main/div/section[3]/div/div[2]/a[1]/div[2]/div[1]/h3")
+	public WebElement Businesscard;
+	@FindBy(xpath = "//*[@id=\"radix-:rf3:-content-reviews\"]/div[1]/button")
+	public WebElement review;
+	@FindBy(xpath = "//*[@id=\"radix-:rf7:\"]/div[2]/div[2]/textarea")
+	public WebElement reviewsection;
+	@FindBy(xpath = "//*[@id=\"radix-:rf7:\"]/div[3]/button")
+	public WebElement postreviewbtn;
+	
+	
 }
 

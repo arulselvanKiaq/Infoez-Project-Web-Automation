@@ -3,6 +3,7 @@ package baseclass;
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -62,11 +63,18 @@ public class Base {
 		driver.navigate().forward();
 	}
 
-	// ------------Explicit Wait---------------
+// ------------Explicit Wait---------------
 	public static WebElement ElementWait(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		return wait.until(ExpectedConditions.visibilityOf(element));
+	return wait.until(ExpectedConditions.visibilityOf(element));
 	}
+	
+	// ------------Explicit Wait---------------
+		//public static void click(WebElement element) {
+		//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		//	wait.until(Expectedconditions.visibilityof(element));
+		//	wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+	//	}
 
 	// ------------Implicit Wait---------------
 	public static void implicitwait() {

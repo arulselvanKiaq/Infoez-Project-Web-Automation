@@ -10,7 +10,7 @@ import page.infoezPage;
 
 public class steps extends Base {
 	infoezPage ip = new infoezPage(driver); 
-		@Given("user launches the Application URL")
+	@Given("user launches the Register page Application URL")
 		public void user_launches_the_application_url() {
 			openUrl("https://d2mojgetgp5xie.cloudfront.net/");
 		}

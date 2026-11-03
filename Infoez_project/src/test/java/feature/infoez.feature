@@ -1,7 +1,7 @@
 Feature: Registration Function
 
   Background:
-    Given user launches the Application URL
+    Given user launches the Register page Application URL
     Given user click the sigin button
     Given user click the create one link
   @ValidRegister
