@@ -66,5 +66,16 @@ public class infoezPage {
 	public WebElement postreviewbtn;
 	
 	
+	@FindBy(xpath="//*[@id=\"root\"]/div/main/div/div[2]/div[1]/button")
+	public WebElement FreePlan;
+	@FindBy(xpath="//*[@id=\"root\"]/div/main/div/div[2]/div[2]/button")
+	public WebElement StarterPlan;
+	@FindBy(xpath="//*[@id=\"root\"]/div/main/div/div[2]/div[3]/button")
+	public WebElement ProPlan;
+	@FindBy(xpath="//*[@id=\"root\"]/div/main/div/div[2]/div[4]/button")
+	public WebElement EnterprisePlan;
+	
+	
+	
 }
 

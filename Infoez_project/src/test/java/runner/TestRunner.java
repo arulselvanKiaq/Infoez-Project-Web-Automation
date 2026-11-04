@@ -9,8 +9,8 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-features = "src/test/java/feature/review.feature",
-glue = "review",
+features = "src/test/java/feature/pricing.feature",
+glue = "Pricing",
  
 dryRun = false,
  
