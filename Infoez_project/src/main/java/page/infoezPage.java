@@ -32,6 +32,8 @@ public class infoezPage {
 	@FindBy(xpath="//*[contains(text(),'Welcome to Infoez')]")
 	public WebElement successfulMessage;
 	
+	
+	
 	@FindBy(xpath = "//input[@data-testid='hero-search-query']")
 	public WebElement ShopSearch;
 	@FindBy(xpath = "//input[@data-testid='hero-search-location']")
@@ -40,6 +42,7 @@ public class infoezPage {
 	public WebElement searchbtn;
 	@FindBy(xpath = "//h3")
 	public WebElement shopName;
+	
 	
 	@FindBy(xpath = "//*[@id=\"root\"]/div/main/div/div[2]/aside/div[2]/div[1]/button/svg")
 	public WebElement categorydrpdwn;
@@ -56,6 +59,7 @@ public class infoezPage {
 	@FindBy(xpath = "//*[@id=\"root\"]/div/main/div/div[2]/aside/div[2]/div[3]/button")
 	public WebElement ratings;
 	
+	
 	@FindBy(xpath = "//*[@id=\"root\"]/div/main/div/section[3]/div/div[2]/a[1]/div[2]/div[1]/h3")
 	public WebElement Businesscard;
 	@FindBy(xpath = "//*[@id=\"radix-:rf3:-content-reviews\"]/div[1]/button")
@@ -64,6 +68,7 @@ public class infoezPage {
 	public WebElement reviewsection;
 	@FindBy(xpath = "//*[@id=\"radix-:rf7:\"]/div[3]/button")
 	public WebElement postreviewbtn;
+	
 	
 	
 	@FindBy(xpath="//*[@id=\"root\"]/div/main/div/div[2]/div[1]/button")
@@ -76,6 +81,45 @@ public class infoezPage {
 	public WebElement EnterprisePlan;
 	
 	
+	@FindBy(xpath="//*[@id=\"root\"]/div/footer/div[1]/div[2]/ul/li[1]/a")
+	public WebElement Businesses;
+	@FindBy(xpath="//*[@id=\"root\"]/div/footer/div[1]/div[2]/ul/li[2]/a")
+	public WebElement Featured;
+	@FindBy(xpath="//*[@id=\"root\"]/div/footer/div[1]/div[2]/ul/li[3]/a")
+	public WebElement TopRated;
+	@FindBy(xpath="//*[@id=\"root\"]/div/footer/div[1]/div[3]/ul/li[1]/a")
+	public WebElement AddyourBusiness;
+	@FindBy(xpath="//*[@id=\"root\"]/div/footer/div[1]/div[3]/ul/li[2]/a")
+	public WebElement PricingPlans;
+	@FindBy(xpath="//*[@id=\"root\"]/div/footer/div[1]/div[3]/ul/li[3]/a")
+	public WebElement HowClaimsWork;
+	@FindBy(xpath="//*[@id=\"root\"]/div/footer/div[1]/div[4]/ul/li[1]/a")
+	public WebElement HowitWorks;
+	@FindBy(xpath="//*[@id=\"root\"]/div/footer/div[1]/div[4]/ul/li[2]/a")
+	public WebElement Pricing;
+	@FindBy(xpath="//*[@id=\"root\"]/div/footer/div[1]/div[4]/ul/li[3]/a")
+	public WebElement Contact;
+	@FindBy(xpath="//*[@id=\"root\"]/div/main/div/div[1]/div/div")
+	public WebElement BusinessesHeading;
+	@FindBy(xpath="//*[@id=\"root\"]/div/main/div/div[2]/div/div/a[1]/div[1]/div")
+	public WebElement FeaturedHeading;
+	@FindBy(xpath="//*[@id=\"root\"]/div/main/div/div[2]/div/div/a[1]/div[2]/div[3]/div/span[1]")
+	public WebElement RatingHeading;
+	@FindBy(xpath="//*[@id=\"root\"]/div/main/div/div/h1")
+	public WebElement AddyourBusinessHeading;
+	@FindBy(xpath="//*[@id=\"root\"]/div/main/div/div[1]/div")
+	public WebElement PricingplansHeading;
+	@FindBy(xpath="//*[@id=\"root\"]/div/main/div/div[1]/h1")
+	public WebElement HowclaimsworkHeading;
+	@FindBy(xpath="//*[@id=\"root\"]/div/main/div/div[1]/h1")
+	public WebElement HowitworksHeading;
+	@FindBy(xpath="//*[@id=\"root\"]/div/main/div/div[1]/div")
+	public WebElement PricingHeading;
+	
+	@FindBy(xpath="//*[@id=\"root\"]/div/main/div/section[6]/div/div[2]/div[2]/a[1]")
+	public WebElement AddBusinessBtn;
+	
 	
 }
+
 

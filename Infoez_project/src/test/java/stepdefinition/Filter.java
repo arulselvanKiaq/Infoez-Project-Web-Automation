@@ -8,18 +8,20 @@ import io.cucumber.java.en.When;
 import page.infoezPage;
 
 public class Filter extends Base {
-	infoezPage FP = new infoezPage(driver);  
+	infoezPage FP ;
 	@When("user launches the Explore Page Application URL")
 	public void user_launches_the_explore_page_application_url() {
+		BrowserLaunch();
+		FP= new infoezPage(driver);
 		openUrl("https://d2mojgetgp5xie.cloudfront.net/search");
 	}
 
 	@When("user click the category and select")
 	public void user_click_the_category_and_select() {
-		//wait.until(ExpectedConditions.elementToBeClickable(FP.categorydrpdwn));
-		ElementWait(FP.categorydrpdwn);
-		click(FP.categorydrpdwn);
-		click(FP.restaurants);
+		
+		click(FP.categorydrpdwn); 
+		click(FP.restaurants); 
+		
 	}
 
 	@When("user click the Sortby and select")

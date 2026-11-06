@@ -4,13 +4,9 @@ Feature: Registration Function
     Given user launches the Register page Application URL
     Given user click the sigin button
     Given user click the create one link
-  @ValidRegister
-  Scenario: Validate Register an account by providing the all fields   
-    When user enter the valid credentials in all input fields
-    Then user click the create account button and registered successfully
-
-  @InvalidRegister
-  Scenario Outline: validate register an account with invalid multiple user details
+  
+ 
+  Scenario Outline: validate register an account with valid and invalid multiple user details
     When user enters Full name "<full name>"
     And user enters Email "<email>"
     And user enters Phone "<phone>"
@@ -26,4 +22,4 @@ Feature: Registration Function
       | karthi     | karthi456@.com          | 9834874432 | karthi@123   | Ener Valid Email Address               |
       | karthi     | karthi456@gmail.        | 9836287234 | karthi@123   | Ener Valid Email Address               |
       | Sathish    | sathish@gmail.com       | 6433287484 | sathish@123  | Email already registered               |
-
+      | Gowthami   | gowtham264@gmail.com    | 8765676435 | gowtham@123  | Account Created Successfully           |

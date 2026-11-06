@@ -19,12 +19,27 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
-	public static WebDriver driver;
+	public static WebDriver driver; 
+	public static WebDriverWait wait; 
+	public String parentWindow; 
+	
+	//public static WebDriver Launchbrowser() 
+	 //	{ 
+	//ChromeOptions options=new ChromeOptions(); 
+	// driver = new ChromeDriver(options); 
+	//  wait=new WebDriverWait(driver,Duration.ofSeconds(30)); 
+	    
+	 // driver.get("https://www.dolibarr.org/"); 
+	 // return driver; 
+	 
+	//}
 
-	// ------------Browser Launch---------------
-	public static void BrowserLaunch() {
-		WebDriverManager.chromedriver().setup();
+	 //------------Browser Launch---------------
+    public static void BrowserLaunch() {	
+	WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
+		wait=new WebDriverWait(driver,Duration.ofSeconds(30)); 
+		
 		
 	}
 
@@ -223,10 +238,10 @@ public class Base {
 	}
 
 	// ------------click---------------
-	public static void click(WebElement element) {
-		element.click();
+	public void click(WebElement element ) { 
+		wait.until(ExpectedConditions.visibilityOf(element)); 
+		wait.until(ExpectedConditions.elementToBeClickable(element)).click(); 
 	}
-
 	// ------------SendKeys---------------
 	public static void sendkeys(WebElement element, String value) {
 		element.sendKeys(value);
@@ -353,5 +368,17 @@ public class Base {
 	public static String getPageSource() {
 		return driver.getPageSource();
 	}
-	
+	//------------get Heading Text---------
+	public static String getHeading(By locator) {
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		return element.getText().trim();
+		}
+	//------------Browser close---------
+	{
+		if(driver != null) {
+			driver.quit();
+		}
+	}
+		
 }
+
