@@ -13,7 +13,7 @@ public class steps extends Base {
 	infoezPage ip ; 
 	@Given("user launches the Register page Application URL")
 		public void user_launches_the_application_url() {
-		BrowserLaunch();
+	
 		 ip= new infoezPage(driver);
 			openUrl("https://d2mojgetgp5xie.cloudfront.net/");
 		}

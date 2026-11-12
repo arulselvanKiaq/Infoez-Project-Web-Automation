@@ -11,7 +11,7 @@ public class Filter extends Base {
 	infoezPage FP ;
 	@When("user launches the Explore Page Application URL")
 	public void user_launches_the_explore_page_application_url() {
-		BrowserLaunch();
+
 		FP= new infoezPage(driver);
 		openUrl("https://d2mojgetgp5xie.cloudfront.net/search");
 	}

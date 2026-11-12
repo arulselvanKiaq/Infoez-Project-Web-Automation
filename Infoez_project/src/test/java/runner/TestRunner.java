@@ -1,16 +1,16 @@
 package runner;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+
+
 import org.junit.runner.RunWith;
 
-import baseclass.Base;
+
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-features = "src/test/java/feature/Business account.feature",
-glue = "BusinessAccount",
+features = "src/test/java/feature/search.feature",
+glue = {"stepdefinition","Hooks"},
  
 dryRun = false,
  
@@ -31,18 +31,10 @@ plugin = {
 monochrome = true
  
 )
- 
-public class TestRunner extends Base {
- 
-@BeforeClass
- 
-public static void Startup() {
-BrowserLaunch();
-maximize();
-
+public class TestRunner{
 }
- 
-@AfterClass
-public static void end() {
-driver.quit();
-}}
+
+
+
+	
+	

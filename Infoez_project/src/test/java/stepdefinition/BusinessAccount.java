@@ -14,7 +14,7 @@ public class BusinessAccount extends Base {
 	
 	@Given("user launches the Explore Page footer Application URL")
 	public void user_launches_the_explore_page_footer_application_url() {
-		BrowserLaunch();
+	
 		BA= new infoezPage(driver);
 		openUrl("https://d2mojgetgp5xie.cloudfront.net/");
 	}

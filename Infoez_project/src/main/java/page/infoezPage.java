@@ -119,7 +119,22 @@ public class infoezPage {
 	@FindBy(xpath="//*[@id=\"root\"]/div/main/div/section[6]/div/div[2]/div[2]/a[1]")
 	public WebElement AddBusinessBtn;
 	
+	@FindBy(xpath="//*[@id=\"radix-:r3:\"]/span[2]")
+	public WebElement customerProfile;
+	@FindBy(xpath="//*[@id=\"radix-:r1p:\"]/div[7]")
+	public WebElement notifications;
+	@FindBy(xpath="//*[@id=\"root\"]/div/main/div/div[1]/button")
+	public WebElement MarkAllReadBtn;
 	
+	
+	@FindBy(xpath = "//*[@id=\"root\"]/div/main/div/div[1]/form/div[1]/input")
+	public WebElement ShopSearchWL;
+	@FindBy(xpath = "//*[@id=\"root\"]/div/main/div/div[1]/form/div[2]/input")
+	public WebElement CitySearchWL;
+	@FindBy(xpath = "//*[@id=\"root\"]/div/main/div/div[1]/form/button")
+	public WebElement searchbtnWL;
+	@FindBy(xpath = "//*[@id=\"root\"]/div/main/div/div[2]/div/div/a[1]/div[2]/div[1]/h3")
+	public WebElement shopNameWL;
 }
 
 

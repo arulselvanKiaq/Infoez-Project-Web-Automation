@@ -1,7 +1,9 @@
 package baseclass;
 
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.openqa.selenium.Alert;
@@ -11,12 +13,11 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
 	public static WebDriver driver; 
@@ -25,7 +26,7 @@ public class Base {
 	
 	//public static WebDriver Launchbrowser() 
 	 //	{ 
-	//ChromeOptions options=new ChromeOptions(); 
+	
 	// driver = new ChromeDriver(options); 
 	//  wait=new WebDriverWait(driver,Duration.ofSeconds(30)); 
 	    
@@ -35,14 +36,36 @@ public class Base {
 	//}
 
 	 //------------Browser Launch---------------
-    public static void BrowserLaunch() {	
-	WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+   // public static void BrowserLaunch() {	
+	//WebDriverManager.chromedriver().setup();
+	//ChromeOptions options=new ChromeOptions(); 
+	//Map<String,Object> prefs = new HashMap<>();
+	//prefs.put("credentials_enable_service", false);
+	//prefs.put("profile.password_manager_enabled", false);
+	//prefs.put("profile.password_managr_leak_detection", false);
+	//options.setExperimentalOption("prefs", prefs);
+		//driver = new ChromeDriver(options);
+		//wait=new WebDriverWait(driver,Duration.ofSeconds(30)); 
+		
+		
+	//}
+	public static void chromeOption() {
+		ChromeOptions op = new ChromeOptions();
+		op.addArguments("--start-maximized");
+		Map<String,Object> prefs = new HashMap<>();
+		prefs.put("profile.password_manager_leak_detection",false);
+		op.setExperimentalOption("prefs", prefs);
+		driver = new ChromeDriver(op);
+	
 		wait=new WebDriverWait(driver,Duration.ofSeconds(30)); 
-		
-		
-	}
-
+		}
+	
+	
+	// ------------click---------------
+		public void click(WebElement element ) { 
+			wait.until(ExpectedConditions.visibilityOf(element)); 
+			wait.until(ExpectedConditions.elementToBeClickable(element)).click(); 
+		}
 	// ------------Window Maximize---------------
 	public static void maximize() {
 		driver.manage().window().maximize();
@@ -237,11 +260,7 @@ public class Base {
 		driver.switchTo().defaultContent();
 	}
 
-	// ------------click---------------
-	public void click(WebElement element ) { 
-		wait.until(ExpectedConditions.visibilityOf(element)); 
-		wait.until(ExpectedConditions.elementToBeClickable(element)).click(); 
-	}
+	
 	// ------------SendKeys---------------
 	public static void sendkeys(WebElement element, String value) {
 		element.sendKeys(value);

@@ -9,7 +9,7 @@ public class review extends Base {
 	infoezPage BP;  
 	@When("user launches the Home Page Application URL")
 	public void user_launches_the_home_page_application_url() {
-		BrowserLaunch();
+	
 		BP= new infoezPage(driver);
 	    openUrl("https://d2mojgetgp5xie.cloudfront.net/");
 	}

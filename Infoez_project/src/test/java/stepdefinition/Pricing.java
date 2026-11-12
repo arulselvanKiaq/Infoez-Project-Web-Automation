@@ -9,7 +9,7 @@ public class Pricing extends Base {
 	infoezPage PP;  
 	@When("user launches the Pricing Page Application URL")
 	public void user_launches_the_pricing_page_application_url() {
-		BrowserLaunch();
+	
 		PP= new infoezPage(driver);
 	    openUrl("https://d2mojgetgp5xie.cloudfront.net/pricing");
 	}

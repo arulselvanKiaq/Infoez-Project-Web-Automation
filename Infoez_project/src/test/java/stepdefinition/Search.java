@@ -15,7 +15,7 @@ public class Search extends Base {
 	
 	@When("user launches the login Page Application URL")
 	public void user_launches_the_login_page_application_url() {
-		BrowserLaunch();
+	
 		SP= new infoezPage(driver);
 		openUrl("https://d2mojgetgp5xie.cloudfront.net/");
 	}
